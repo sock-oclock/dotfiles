@@ -1,0 +1,90 @@
+* {
+  font-family: "Red Rose";
+  font-size: 12pt;
+  border: none;
+  border-radius: 100px;
+  padding: 2px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+window#waybar {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition-duration: 0.5s;
+  transition-property: background-color;
+}
+#workspaces button {
+  background: #24283b;
+  color: #c0caf5;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+#workspaces button.focused {
+  color: #c0caf5;
+  background: #414868;
+}
+#workspaces button.urgent {
+  color: #f7768e;
+}
+#workspaces button.persistent {
+  color: #414868;
+}
+#workspaces button:hover {
+  color: #c0caf5;
+  background: #414868;
+  box-shadow: inherit;
+}
+#backlight,
+#bluetooth,
+#network,
+#pulseaudio,
+#battery,
+#mode {
+  margin: 0px 2px;   /* gaps between modules */
+  padding: 0.2rem 0.6rem;
+  color: #000000;
+}
+#backlight {
+  margin: 0px 2px;   /* gaps between modules */
+  padding: 0.2rem 0.6rem;
+  color: #000000;
+}
+#clock {
+  margin: 0px 2px;   /* gaps between modules */
+  padding: 0.2rem 0.6rem;
+  color: #000000;
+  font-size: 16pt;
+  font-weight: bold;
+}
+#mode,
+#tray {
+  margin: 0 0 0 2px;
+}
+/* #mode { */
+/*   color: #24283b; */
+/*   background-color: #f7768e; */
+/* } */
+@keyframes blink {
+  to {
+    color: #c0caf5;
+    background-color: #24283b;
+  }
+}
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: #f7768e;
+  background-color: #24283b;
+}
+#battery.charging {
+  color: #9ece6a;
+  background-color: #24283b;
+}
+#custom-separator {
+  color: #414868;
+}

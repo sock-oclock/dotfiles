@@ -1,0 +1,88 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 20,
+  //"width": 1920, // Comment for dynamic width
+  "margin": 10,
+  "modules-left": [
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "clock#date",
+    "custom/separator",
+    "clock#time"
+  ],
+  "modules-right": [
+    "network",
+    "custom/separator",
+    "pulseaudio",
+    "custom/separator",
+    "backlight",
+    "custom/separator",
+    "battery",
+    "tray"
+  ],
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "sway/workspaces": {
+    "disable-scroll": false,
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "0": []
+    }
+  },
+  "clock#date": {
+    "format": "{0:%d %B %Y}",
+    "interval": 1,
+    "tooltip": false
+  },
+  "clock#time": {
+    "format": "{0:%H:%M:%S %p}",
+    "interval": 1,
+    "tooltip": false
+  },
+  "battery": {
+    "interval": 600,
+    "design-capacity": false,
+    "states": {
+      "warning": 15,
+      "critical":10 
+    },
+    "format": "🔋 {capacity}%",
+    "format-charging": "🪫 {capacity}%",
+    "format-time": "{H}h {M}m",
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5,
+  },
+  "network": {
+    "interval": 1,
+    "format-wifi": "✅ {essid} ({signalStrength}%)",
+    "format-disconnected": "❌ Disconnected",
+    "tooltip": false
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "scroll-step": 5,
+    "format": "🔆 {percent}%",
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "🔊 {volume}%", 
+    "format-muted": "🔇 Muted",
+    "tooltip": false
+  },
+}
