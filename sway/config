@@ -183,4 +183,4 @@ include /etc/sway/config.d/*
 gaps inner 10
 corner_radius 10
 font pango:monospace 0.001
-default_border pixel 3
+default_border none
