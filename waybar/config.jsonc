@@ -59,8 +59,8 @@
       "warning": 15,
       "critical":10 
     },
-    "format": "🔋 {capacity}%",
-    "format-charging": "🪫 {capacity}%",
+    "format": "🪫 {capacity}%",
+    "format-charging": "🔋 {capacity}%",
     "format-time": "{H}h {M}m",
   },
   "tray": {
